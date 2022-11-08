@@ -1,1 +1,21 @@
-<p>pokemon-card works!</p>
+<div class="pokemon-card">
+    <div class="pokemon-card__image">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt="Pokemon Image">
+    </div>
+
+    <div class="pokemon-card__number">
+        Nº0001
+    </div>
+<!-- Block Element Modifier (BEM)
+        Define que precisamos ter um bloco que tenha significado por si só, um elemento que tenha significado somente dentro desse bloco e um modificador em caso de elementos que vao ter modificaçoes. Entao no nosso caso o bloco é o pokemon-card e o elemento que tem significado dentro do nosso bloco é o name -->
+    <div class="pokemon-card__name"> 
+        Bulbasaur
+    </div>
+
+    <div class="pokemon-card__types">
+        <!-- Agora vamos adicionar o modificador
+                Repetimos o nome do bloco e do elemento e colocamos o sinal de menos (-) duas vezes e o nome do modificador que queremos. No nosso caso será grass e poison-->
+        <div class="pokemon-card__type pokemon-card__type--grass">Grass</div>
+        <div class="pokemon-card__type pokemon-card__type--poison">Poison</div>
+    </div>
+</div>
