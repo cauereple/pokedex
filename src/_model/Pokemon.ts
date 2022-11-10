@@ -12,16 +12,5 @@ export function getPokemonImage(pokemon: Pokemon): string {
 }
 
 export function getPokemonNumber(pokemon: Pokemon): string {
-  return leadingZero(pokemon.number)
-}
-
-function leadingZero(str: string | number, size = 3): string {
-  
-  let s = String(str);
-
-  while(s.length < (size || 2)) {
-    s = '0' + s;
-  }
-
-  return s;
+    return pokemon.number.toString().padStart(3, '0')
 }
