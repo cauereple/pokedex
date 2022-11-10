@@ -1,4 +1,4 @@
-import { Type } from "./type";
+import { Type } from "./Type";
 
 export interface Pokemon {
     image: string;

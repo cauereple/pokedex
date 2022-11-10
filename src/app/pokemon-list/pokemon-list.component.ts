@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Pokemon } from 'src/_model/pokemon';
-import { Type } from 'src/_model/type';
+import { Pokemon } from 'src/_model/Pokemon';
+import { Type } from 'src/_model/Type';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -42,6 +42,23 @@ export class PokemonListComponent {
       name: 'Charmander',
       types: [
         Type.Fire
+      ],
+    },
+    {
+      image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png',
+      number: 5,
+      name: 'Charmeleon',
+      types: [
+        Type.Fire
+      ],
+    },
+    {
+      image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
+      number: 6,
+      name: 'Charizard',
+      types: [
+        Type.Fire,
+        Type.Flying
       ],
     },
   ];
