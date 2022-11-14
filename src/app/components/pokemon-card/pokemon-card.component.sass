@@ -1,19 +1,21 @@
 .pokemon-card
+    border-radius: 10px
     display: flex
     flex-direction: column
     font-family: "Signika", arial, sans-serif
     margin: 0 5px 50px
-    width: 215px
+    padding: 10px
 
     &__image
         background:#F2F2F2
+        border-radius: 105px
 
     &__number,
     &__name
         padding: 0 10px
 
     &__number
-        color: #919191
+        color: #ffffff
         font-size: 80%
         padding-top: 2px
 
@@ -25,6 +27,123 @@
 
     &__types
         display: flex
+    
+    &__color
+        &--grasspoison
+            background: linear-gradient(50deg, #8cc7ac 50%, #caa2d4 50%)
+        
+        &--grass
+            background-color: #8cc7ac
+        
+        &--fire
+            background-color: #ec9f5c
+
+        &--fireflying
+            background: linear-gradient(50deg, #ec9f5c 50%, #4d95a4 50%)
+        
+        &--water
+            background-color: #90c6d4
+
+        &--bug
+            background-color: #aece76
+
+        &--bugflying
+            background: linear-gradient(50deg, #aece76 50%, #4d95a4 50%)
+
+        &--bugpoison
+            background: linear-gradient(50deg, #aece76 50%, #caa2d4 50%)
+        
+        &--normal
+            background-color: #c2c2c2
+
+        &--normalflying
+            background: linear-gradient(50deg, #c2c2c2 50%, #4d95a4 50%)
+
+        &--poison
+            background-color: #caa2d4
+
+        &--electric
+            background-color: #ffdd77
+        
+        &--ground
+            background-color: #b59d68
+        
+        &--poisonground
+            background: linear-gradient(50deg, #caa2d4 50%, #b59d68 50%)
+
+        &--fairy
+            background-color: #f7cfd3
+        
+        &--normalfairy
+            background: linear-gradient(50deg, #c2c2c2 50%, #f7cfd3 50%)
+
+        &--poisonflying
+            background: linear-gradient(50deg, #caa2d4 50%, #4d95a4 50%)
+        
+        &--buggrass
+            background: linear-gradient(50deg, #aece76 50%, #8cc7ac 50%)
+        
+        &--fighting
+            background-color: #ab5622
+
+        &--waterfighting
+            background: linear-gradient(50deg, #90c6d4 50%, #ab5622 50%)
+
+        &--psychic
+            background-color: #f1acd5
+        
+        &--waterpoison
+            background: linear-gradient(50deg, #90c6d4 50%, #caa2d4 50%)
+        
+        &--rockground
+            background: linear-gradient(50deg, #9a9a9a 50%, #b59d68 50%)
+        
+        &--groundrock
+            background: linear-gradient(50deg, #b59d68 50%, #9a9a9a 50%)
+        
+        &--waterpsychic
+            background: linear-gradient(50deg, #90c6d4 50%, #f1acd5 50%)
+
+        &--electricsteel
+            background: linear-gradient(50deg, #ffdd77 50%, #b9cdce 50%)
+
+        &--waterice
+            background: linear-gradient(50deg, #90c6d4 50%, #7de1ff 50%)
+
+        &--ghostpoison
+            background: linear-gradient(50deg, #56407a 50%, #caa2d4 50%)
+        
+        &--grasspsychic
+            background: linear-gradient(50deg, #8cc7ac 50%, #f1acd5 50%)
+        
+        &--psychicfairy
+            background: linear-gradient(50deg, #f1acd5 50%, #f7cfd3 50%)
+
+        &--icepsychic
+            background: linear-gradient(50deg, #7de1ff 50%, #f1acd5 50%)
+        
+        &--waterflying
+            background: linear-gradient(50deg, #90c6d4 50%, #4d95a4 50%)
+        
+        &--rockwater
+            background: linear-gradient(50deg, #9a9a9a 50%, #90c6d4 50%)
+        
+        &--rockflying
+            background: linear-gradient(50deg, #9a9a9a 50%, #4d95a4 50%)
+
+        &--iceflying
+            background: linear-gradient(50deg, #7de1ff 50%, #4d95a4 50%)
+        
+        &--electricflying
+            background: linear-gradient(50deg, #ffdd77 50%, #4d95a4 50%)
+        
+        &--dragon
+            background-color: #e27966
+        
+        &--dragonflying
+            background: linear-gradient(50deg, #e27966 50%, #4d95a4 50%)
+
+            
 
     &__type
         border-radius: 5px
@@ -36,6 +155,7 @@
         text-align: center
         text-transform: capitalize
         width: 38.4375%
+        box-shadow: 0 1px 6px 0 #171717
 
         &--bug
             background: -webkit-linear-gradient(180deg, #729f3f 50%, #729f3f 50%)
@@ -198,3 +318,7 @@
             background: linear-gradient(180deg, #4592c4 50%, #4592c4 50%)
             background-color: #4592c4
             color: #fff
+
+.pokemon-card:hover
+    box-shadow: 0 1px 6px 0 #171717
+    border-color: rgba(223,225,229,0)

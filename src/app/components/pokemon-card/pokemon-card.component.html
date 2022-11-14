@@ -1,4 +1,5 @@
-<div class="pokemon-card" *ngIf="pokemon">
+<div class="pokemon-card" *ngIf="pokemon"
+[class]="getPokemonType(pokemon)">
     <div class="pokemon-card__image">
         <!-- <img [src]="pokemon.image" alt="Pokemon Image"> -->
         <img [src]="getPokemonImage(pokemon)" alt="Pokemon Image">
@@ -18,7 +19,7 @@
                 Repetimos o nome do bloco e do elemento e colocamos o sinal de menos (-) duas vezes e o nome do modificador que queremos. No nosso caso será grass e poison-->
         <div class="pokemon-card__type" 
             *ngFor="let type of pokemon.types"
-            [class]="'pokemon-card__type--'.concat(type.toLocaleLowerCase())">
+            [class]="'pokemon-card__type--'.concat(type)">
             {{ type }}
         </div>
     </div>

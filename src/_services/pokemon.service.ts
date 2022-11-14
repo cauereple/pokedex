@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { from, map, mergeMap } from 'rxjs';
+import { from, map, mergeMap, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Pokemon } from 'src/_model/Pokemon';
 
 @Injectable({
@@ -11,12 +12,14 @@ export class PokemonService {
   //public pokemons = new ReplaySubject<Pokemon[]>(1); // o ReplaySubject toda vez que alguém tentar pegar informação dele, ele vai repetir a última informação que está lá
 
   public pokemons: Pokemon[] = [];
+  baseUrl = environment.baseUrl;
 
   constructor(private httpClient: HttpClient) { 
+    this.getPokemons()
+  }  
 
-      const allPokemonsUrl = 'https://pokeapi.co/api/v2/pokemon/'; 
-
-      this.httpClient.get<any>(allPokemonsUrl).pipe(
+  getPokemons() {
+    return this.httpClient.get<any>(`${this.baseUrl}/pokemon?limit=151`).pipe(
         map(value => value.results),
         map((value: any) => {
           return from(value).pipe(
@@ -24,11 +27,11 @@ export class PokemonService {
           );
         }),
         mergeMap(value => value),
-        ).subscribe((results: any) => this.pokemons[results.id] = {
-            image: results.sprites.front_default,
-            number: results.id,
-            name: results.name,
-            types: results.types.map((t: any) => t.type.name),
+        ).subscribe((pokemonApiResult: any) => this.pokemons[pokemonApiResult.id] = {
+            image: pokemonApiResult.sprites.front_default,
+            number: pokemonApiResult.id,
+            name: pokemonApiResult.name,
+            types: pokemonApiResult.types.map((t: any) => t.type.name),
           })
-    }
+  }
 }
