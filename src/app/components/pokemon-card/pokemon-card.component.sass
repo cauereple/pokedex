@@ -29,23 +29,11 @@
         display: flex
     
     &__color
-        &--grasspoison
-            background: linear-gradient(50deg, #8cc7ac 50%, #caa2d4 50%)
-        
-        &--grass
-            background-color: #8cc7ac
-        
-        &--fire
-            background-color: #ec9f5c
-
-        &--fireflying
-            background: linear-gradient(50deg, #ec9f5c 50%, #4d95a4 50%)
-        
-        &--water
-            background-color: #90c6d4
-
         &--bug
             background-color: #aece76
+
+        &--buggrass
+            background: linear-gradient(50deg, #aece76 50%, #8cc7ac 50%)
 
         &--bugflying
             background: linear-gradient(50deg, #aece76 50%, #4d95a4 50%)
@@ -53,97 +41,549 @@
         &--bugpoison
             background: linear-gradient(50deg, #aece76 50%, #caa2d4 50%)
         
-        &--normal
-            background-color: #c2c2c2
-
-        &--normalflying
-            background: linear-gradient(50deg, #c2c2c2 50%, #4d95a4 50%)
-
-        &--poison
-            background-color: #caa2d4
-
-        &--electric
-            background-color: #ffdd77
+        &--bugpsychic
+            background: linear-gradient(50deg, #aece76 50%, #f1acd5 50%)
         
-        &--ground
-            background-color: #b59d68
+        &--bugsteel
+            background: linear-gradient(50deg, #aece76 50%, #b9cdce 50%)
         
-        &--poisonground
-            background: linear-gradient(50deg, #caa2d4 50%, #b59d68 50%)
-
-        &--fairy
-            background-color: #f7cfd3
+        &--bugrock
+            background: linear-gradient(50deg, #aece76 50%, #9a9a9a 50%)
         
-        &--normalfairy
-            background: linear-gradient(50deg, #c2c2c2 50%, #f7cfd3 50%)
-
-        &--poisonflying
-            background: linear-gradient(50deg, #caa2d4 50%, #4d95a4 50%)
+        &--bugfighting
+            background: linear-gradient(50deg, #aece76 50%, #ab5622 50%)
         
-        &--buggrass
-            background: linear-gradient(50deg, #aece76 50%, #8cc7ac 50%)
+        &--bugfire
+            background: linear-gradient(50deg, #aece76 50%, #ec9f5c 50%)
         
-        &--fighting
-            background-color: #ab5622
-
-        &--waterfighting
-            background: linear-gradient(50deg, #90c6d4 50%, #ab5622 50%)
-
-        &--psychic
-            background-color: #f1acd5
+        &--bugfairy
+            background: linear-gradient(50deg, #aece76 50%, #f7cfd3 50%)
         
-        &--waterpoison
-            background: linear-gradient(50deg, #90c6d4 50%, #caa2d4 50%)
+        &--bugwater
+            background: linear-gradient(50deg, #aece76 50%, #90c6d4 50%)
         
-        &--rockground
-            background: linear-gradient(50deg, #9a9a9a 50%, #b59d68 50%)
+        &--bugground
+            background: linear-gradient(50deg, #aece76 50%, #b59d68 50%)
         
-        &--groundrock
-            background: linear-gradient(50deg, #b59d68 50%, #9a9a9a 50%)
+        &--bugghost
+            background: linear-gradient(50deg, #aece76 50%, #555c69 50%)
         
-        &--waterpsychic
-            background: linear-gradient(50deg, #90c6d4 50%, #f1acd5 50%)
-
-        &--electricsteel
-            background: linear-gradient(50deg, #ffdd77 50%, #b9cdce 50%)
-
-        &--waterice
-            background: linear-gradient(50deg, #90c6d4 50%, #7de1ff 50%)
-
-        &--ghostpoison
-            background: linear-gradient(50deg, #56407a 50%, #caa2d4 50%)
-        
-        &--grasspsychic
-            background: linear-gradient(50deg, #8cc7ac 50%, #f1acd5 50%)
-        
-        &--psychicfairy
-            background: linear-gradient(50deg, #f1acd5 50%, #f7cfd3 50%)
-
-        &--icepsychic
-            background: linear-gradient(50deg, #7de1ff 50%, #f1acd5 50%)
-        
-        &--waterflying
-            background: linear-gradient(50deg, #90c6d4 50%, #4d95a4 50%)
-        
-        &--rockwater
-            background: linear-gradient(50deg, #9a9a9a 50%, #90c6d4 50%)
-        
-        &--rockflying
-            background: linear-gradient(50deg, #9a9a9a 50%, #4d95a4 50%)
-
-        &--iceflying
-            background: linear-gradient(50deg, #7de1ff 50%, #4d95a4 50%)
-        
-        &--electricflying
-            background: linear-gradient(50deg, #ffdd77 50%, #4d95a4 50%)
+        &--bugelectric
+            background: linear-gradient(50deg, #aece76 50%, #ffdd77 50%)
         
         &--dragon
             background-color: #e27966
         
+        &--dragonelectric
+            background: linear-gradient(50deg, #e27966 50%, #ffdd77 50%)
+        
         &--dragonflying
             background: linear-gradient(50deg, #e27966 50%, #4d95a4 50%)
+        
+        &--dragonfire
+            background: linear-gradient(50deg, #e27966 50%, #ec9f5c 50%)
+        
+        &--dragonfairy
+            background: linear-gradient(50deg, #e27966 50%, #f7cfd3 50%)
+        
+        &--dragonfighting
+            background: linear-gradient(50deg, #e27966 50%, #ab5622 50%)
+        
+        &--dragonghost
+            background: linear-gradient(50deg, #e27966 50%, #56407a 50%)
+        
+        &--dragonice
+            background: linear-gradient(50deg, #e27966 50%, #7de1ff 50%)
+        
+        &--dragonpsychic
+            background: linear-gradient(50deg, #e27966 50%, #f1acd5 50%)
+        
+        &--dragonground
+            background: linear-gradient(50deg, #e27966 50%, #b59d68 50%)
+        
+        &--dark
+            background-color: #555c69
+        
+        &--darkfairy
+            background: linear-gradient(50deg, #555c69 50%, #f7cfd3 50%)
+        
+        &--darkflying
+            background: linear-gradient(50deg, #555c69 50%, #4d95a4 50%)
+        
+        &--darkice
+            background: linear-gradient(50deg, #555c69 50%, #7de1ff 50%)
+        
+        &--darkfire
+            background: linear-gradient(50deg, #555c69 50%, #ec9f5c 50%)
+        
+        &--darkfighting
+            background: linear-gradient(50deg, #555c69 50%, #ab5622 50%)
+        
+        &--darkghost
+            background: linear-gradient(50deg, #555c69 50%, #56407a 50%)
+        
+        &--darkgrass
+            background: linear-gradient(50deg, #555c69 50%, #8cc7ac 50%)
+        
+        &--darknormal
+            background: linear-gradient(50deg, #555c69 50%, #c2c2c2 50%)
+        
+        &--darkpoison
+            background: linear-gradient(50deg, #555c69 50%, #caa2d4 50%)
+        
+        &--darkpsychic
+            background: linear-gradient(50deg, #555c69 50%, #f1acd5 50%)
+        
+        &--darksteel
+            background: linear-gradient(50deg, #555c69 50%, #b9cdce 50%)
+        
+        &--darkdragon
+            background: linear-gradient(50deg, #555c69 50%, #e27966 50%)
+        
+        &--electric
+            background-color: #ffdd77
+        
+        &--electricdark
+            background: linear-gradient(50deg, #ffdd77 50%, #555c69 50%)
+        
+        &--electricdragon
+            background: linear-gradient(50deg, #ffdd77 50%, #e27966 50%)
+        
+        &--electricice
+            background: linear-gradient(50deg, #ffdd77 50%, #7de1ff 50%)
+        
+        &--electricsteel
+            background: linear-gradient(50deg, #ffdd77 50%, #b9cdce 50%)
+        
+        &--electricflying
+            background: linear-gradient(50deg, #ffdd77 50%, #4d95a4 50%)
+        
+        &--electricfairy
+            background: linear-gradient(50deg, #ffdd77 50%, #f7cfd3 50%)
+        
+        &--electricfire
+            background: linear-gradient(50deg, #ffdd77 50%, #ec9f5c 50%)
+        
+        &--electricghost
+            background: linear-gradient(50deg, #ffdd77 50%, #56407a 50%)
+        
+        &--electricgrass
+            background: linear-gradient(50deg, #ffdd77 50%, #8cc7ac 50%)
+        
+        &--electricnormal
+            background: linear-gradient(50deg, #ffdd77 50%, #c2c2c2 50%)
+        
+        &--electricpoison
+            background: linear-gradient(50deg, #ffdd77 50%, #caa2d4 50%)
+        
+        &--electricpsychic
+            background: linear-gradient(50deg, #ffdd77 50%, #f1acd5 50%)
+        
+        &--electricwater
+            background: linear-gradient(50deg, #ffdd77 50%, #90c6d4 50%)
 
-            
+        &--fighting
+            background-color: #ab5622
+        
+        &--fightingpoison
+            background: linear-gradient(50deg, #ab5622 50%, #caa2d4 50%)
+
+        &--fightingpsychic
+            background: linear-gradient(50deg, #ab5622 50%, #f1acd5 50%)
+        
+        &--fightingice
+            background: linear-gradient(50deg, #ab5622 50%, #7de1ff 50%)
+        
+        &--fightingsteel
+            background: linear-gradient(50deg, #ab5622 50%, #b9cdce 50%)
+        
+        &--fightingdark
+            background: linear-gradient(50deg, #ab5622 50%, #555c69 50%)
+        
+        &--fightingghost
+            background: linear-gradient(50deg, #ab5622 50%, #56407a 50%)
+        
+        &--fightingflying
+            background: linear-gradient(50deg, #ab5622 50%, #4d95a4 50%)
+        
+        &--flying
+            background-color: #4d95a4
+        
+        &--flyingdragon
+            background: linear-gradient(50deg, #4d95a4 50%, #e27966 50%)
+        
+        &--flyingsteel
+            background: linear-gradient(50deg, #4d95a4 50%, #b9cdce 50%)
+        
+        &--flyingwater
+            background: linear-gradient(50deg, #4d95a4 50%, #90c6d4 50%)
+        
+        &--fire
+            background-color: #ec9f5c
+        
+        &--firebug
+            background: linear-gradient(50deg, #ec9f5c 50%, #aece76 50%)
+        
+        &--firedark
+            background: linear-gradient(50deg, #ec9f5c 50%, #555c69 50%)
+        
+        &--firedragon
+            background: linear-gradient(50deg, #ec9f5c 50%, #e27966 50%)
+        
+        &--firefighting
+            background: linear-gradient(50deg, #ec9f5c 50%, #ab5622 50%)
+
+        &--fireflying
+            background: linear-gradient(50deg, #ec9f5c 50%, #4d95a4 50%)
+        
+        &--firerock
+            background: linear-gradient(50deg, #ec9f5c 50%, #9a9a9a 50%)
+
+        &--fireground
+            background: linear-gradient(50deg, #ec9f5c 50%, #b59d68 50%)
+        
+        &--fireghost
+            background: linear-gradient(50deg, #ec9f5c 50%, #56407a 50%)
+        
+        &--firenormal
+            background: linear-gradient(50deg, #ec9f5c 50%, #c2c2c2 50%)
+        
+        &--firesteel
+            background: linear-gradient(50deg, #ec9f5c 50%, #b9cdce 50%)
+        
+        &--firepsychic
+            background: linear-gradient(50deg, #ec9f5c 50%, #f1acd5 50%)
+        
+        &--firewater
+            background: linear-gradient(50deg, #ec9f5c 50%, #90c6d4 50%)
+
+        &--fairy
+            background-color: #f7cfd3
+        
+        &--fairyflying
+            background: linear-gradient(50deg, #f7cfd3 50%, #4d95a4 50%)
+
+        &--grass
+            background-color: #8cc7ac
+        
+        &--grasspoison
+            background: linear-gradient(50deg, #8cc7ac 50%, #caa2d4 50%)
+
+        &--grasspsychic
+            background: linear-gradient(50deg, #8cc7ac 50%, #f1acd5 50%)
+        
+        &--grassflying
+            background: linear-gradient(50deg, #8cc7ac 50%, #4d95a4 50%)
+        
+        &--grassdark
+            background: linear-gradient(50deg, #8cc7ac 50%, #555c69 50%)
+        
+        &--grassdragon
+            background: linear-gradient(50deg, #8cc7ac 50%, #e27966 50%)
+        
+        &--grassfighting
+            background: linear-gradient(50deg, #8cc7ac 50%, #ab5622 50%)
+        
+        &--grassfairy
+            background: linear-gradient(50deg, #8cc7ac 50%, #f7cfd3 50%)
+        
+        &--grassground
+            background: linear-gradient(50deg, #8cc7ac 50%, #ab5622 50%)
+        
+        &--grassghost
+            background: linear-gradient(50deg, #8cc7ac 50%, #56407a 50%)
+        
+        &--grassice
+            background: linear-gradient(50deg, #8cc7ac 50%, #7de1ff 50%)
+        
+        &--grasssteel
+            background: linear-gradient(50deg, #8cc7ac 50%, #b9cdce 50%)
+        
+        &--ground
+            background-color: #b59d68
+
+        &--groundrock
+            background: linear-gradient(50deg, #b59d68 50%, #9a9a9a 50%)
+        
+        &--groundfire
+            background: linear-gradient(50deg, #b59d68 50%, #ec9f5c 50%)
+        
+        &--groundflying
+            background: linear-gradient(50deg, #b59d68 50%, #4d95a4 50%)
+
+        &--grounddragon
+            background: linear-gradient(50deg, #b59d68 50%, #e27966 50%)
+        
+        &--groundnormal
+            background: linear-gradient(50deg, #b59d68 50%, #c2c2c2 50%)
+        
+        &--groundpsychic
+            background: linear-gradient(50deg, #b59d68 50%, #f1acd5 50%)
+        
+        &--groundsteel
+            background: linear-gradient(50deg, #b59d68 50%, #b9cdce 50%)
+        
+        &--grounddark
+            background: linear-gradient(50deg, #b59d68 50%, #555c69 50%)
+        
+        &--groundelectric
+            background: linear-gradient(50deg, #b59d68 50%, #ffdd77 50%)
+        
+        &--groundghost
+            background: linear-gradient(50deg, #b59d68 50%, #56407a 50%)
+        
+        &--ghost
+            background-color: #56407a
+        
+        &--ghostpoison
+            background: linear-gradient(50deg, #56407a 50%, #caa2d4 50%)
+        
+        &--ghostflying
+            background: linear-gradient(50deg, #56407a 50%, #4d95a4 50%)
+        
+        &--ghostgrass
+            background: linear-gradient(50deg, #56407a 50%, #8cc7ac 50%)
+        
+        &--ghostground
+            background: linear-gradient(50deg, #56407a 50%, #b59d68 50%)
+        
+        &--ghostfire
+            background: linear-gradient(50deg, #56407a 50%, #ec9f5c 50%)
+        
+        &--ghostfairy
+            background: linear-gradient(50deg, #56407a 50%, #f7cfd3 50%)
+        
+        &--ghostdark
+            background: linear-gradient(50deg, #56407a 50%, #555c69 50%)
+        
+        &--ghostdragon
+            background: linear-gradient(50deg, #56407a 50%, #e27966 50%)
+        
+        &--ice
+            background-color: #7de1ff
+        
+        &--icebug
+            background: linear-gradient(50deg, #7de1ff 50%, #aece76 50%)
+        
+        &--icepsychic
+            background: linear-gradient(50deg, #7de1ff 50%, #f1acd5 50%)
+        
+        &--iceflying
+            background: linear-gradient(50deg, #7de1ff 50%, #4d95a4 50%)
+        
+        &--iceground
+            background: linear-gradient(50deg, #7de1ff 50%, #b59d68 50%)
+        
+        &--icewater
+            background: linear-gradient(50deg, #7de1ff 50%, #90c6d4 50%)
+        
+        &--iceghost
+            background: linear-gradient(50deg, #7de1ff 50%, #56407a 50%)
+        
+        &--normal
+            background-color: #c2c2c2
+        
+        &--normaldragon
+            background: linear-gradient(50deg, #c2c2c2 50%, #e27966 50%)
+        
+        &--normalpsychic
+            background: linear-gradient(50deg, #c2c2c2 50%, #f1acd5 50%)
+
+        &--normalflying
+            background: linear-gradient(50deg, #c2c2c2 50%, #4d95a4 50%)
+        
+        &--normalfighting
+            background: linear-gradient(50deg, #c2c2c2 50%, #ab5622 50%)
+        
+        &--normalfairy
+            background: linear-gradient(50deg, #c2c2c2 50%, #f7cfd3 50%)
+
+        &--normalwater
+            background: linear-gradient(50deg, #c2c2c2 50%, #90c6d4 50%)
+        
+        &--normalgrass
+            background: linear-gradient(50deg, #c2c2c2 50%, #8cc7ac 50%)
+        
+        &--normalground
+            background: linear-gradient(50deg, #c2c2c2 50%, #b59d68 50%)
+
+        &--poison
+            background-color: #caa2d4
+
+        &--poisonground
+            background: linear-gradient(50deg, #caa2d4 50%, #b59d68 50%)
+        
+        &--poisonflying
+            background: linear-gradient(50deg, #caa2d4 50%, #4d95a4 50%)
+        
+        &--poisondark
+            background: linear-gradient(50deg, #caa2d4 50%, #555c69 50%)
+        
+        &--poisonbug
+            background: linear-gradient(50deg, #caa2d4 50%, #aece76 50%)
+        
+        &--poisondragon
+            background: linear-gradient(50deg, #caa2d4 50%, #e27966 50%)
+        
+        &--poisonfighting
+            background: linear-gradient(50deg, #caa2d4 50%, #ab5622 50%)
+        
+        &--poisonfire
+            background: linear-gradient(50deg, #caa2d4 50%, #ec9f5c 50%)
+        
+        &--poisonwater
+            background: linear-gradient(50deg, #caa2d4 50%, #90c6d4 50%)
+
+        &--psychic
+            background-color: #f1acd5
+        
+        &--psychicdark
+            background: linear-gradient(50deg, #f1acd5 50%, #555c69 50%)
+        
+        &--psychicfairy
+            background: linear-gradient(50deg, #f1acd5 50%, #f7cfd3 50%)
+        
+        &--psychicflying
+            background: linear-gradient(50deg, #f1acd5 50%, #4d95a4 50%)
+        
+        &--psychicfighting
+            background: linear-gradient(50deg, #f1acd5 50%, #ab5622 50%)
+        
+        &--psychicfire
+            background: linear-gradient(50deg, #f1acd5 50%, #ec9f5c 50%)
+        
+        &--psychicgrass
+            background: linear-gradient(50deg, #f1acd5 50%, #8cc7ac 50%)
+        
+        &--psychicghost
+            background: linear-gradient(50deg, #f1acd5 50%, #555c69 50%)
+        
+        &--psychicsteel
+            background: linear-gradient(50deg, #f1acd5 50%, #b9cdce 50%)
+        
+        &--psychicnormal
+            background: linear-gradient(50deg, #f1acd5 50%, #c2c2c2 50%)
+        
+        &--rock
+            background-color: #9a9a9a
+        
+        &--rockground
+            background: linear-gradient(50deg, #9a9a9a 50%, #b59d68 50%)
+
+        &--rockwater
+            background: linear-gradient(50deg, #9a9a9a 50%, #90c6d4 50%)
+        
+        &--rockfairy
+            background: linear-gradient(50deg, #9a9a9a 50%, #f7cfd3 50%)
+        
+        &--rockflying
+            background: linear-gradient(50deg, #9a9a9a 50%, #4d95a4 50%)
+        
+        &--rockfighting
+            background: linear-gradient(50deg, #9a9a9a 50%, #ab5622 50%)
+        
+        &--rockfire
+            background: linear-gradient(50deg, #9a9a9a 50%, #ec9f5c 50%)
+        
+        &--rockdark
+            background: linear-gradient(50deg, #9a9a9a 50%, #555c69 50%)
+        
+        &--rockdragon
+            background: linear-gradient(50deg, #9a9a9a 50%, #e27966 50%)
+        
+        &--rockpsychic
+            background: linear-gradient(50deg, #9a9a9a 50%, #f1acd5 50%)
+        
+        &--rockpoison
+            background: linear-gradient(50deg, #9a9a9a 50%, #caa2d4 50%)
+        
+        &--rockgrass
+            background: linear-gradient(50deg, #9a9a9a 50%, #8cc7ac 50%)
+        
+        &--rockbug
+            background: linear-gradient(50deg, #9a9a9a 50%, #aece76 50%)
+        
+        &--rockice
+            background: linear-gradient(50deg, #9a9a9a 50%, #7de1ff 50%)
+        
+        &--rocksteel
+            background: linear-gradient(50deg, #9a9a9a 50%, #b9cdce 50%)
+
+        &--steel
+            background-color: #b9cdce
+        
+        &--steelground
+            background: linear-gradient(50deg, #b9cdce 50%, #b59d68 50%)
+        
+        &--steelflying
+            background: linear-gradient(50deg, #b9cdce 50%, #4d95a4 50%)
+        
+        &--steelfighting
+            background: linear-gradient(50deg, #b9cdce 50%, #ab5622 50%)
+        
+        &--steelfairy
+            background: linear-gradient(50deg, #b9cdce 50%, #f7cfd3 50%)
+        
+        &--steelghost
+            background: linear-gradient(50deg, #b9cdce 50%, #555c69 50%)
+        
+        &--steelrock
+            background: linear-gradient(50deg, #b9cdce 50%, #9a9a9a 50%)
+        
+        &--steelpsychic
+            background: linear-gradient(50deg, #b9cdce 50%, #f1acd5 50%)
+        
+        &--steeldragon
+            background: linear-gradient(50deg, #b9cdce 50%, #e27966 50%)
+
+        &--water
+            background-color: #90c6d4
+        
+        &--waterbug
+            background: linear-gradient(50deg, #90c6d4 50%, #aece76 50%)
+        
+        &--waterfighting
+            background: linear-gradient(50deg, #90c6d4 50%, #ab5622 50%)
+
+        &--waterpoison
+            background: linear-gradient(50deg, #90c6d4 50%, #caa2d4 50%)
+        
+        &--waterpsychic
+            background: linear-gradient(50deg, #90c6d4 50%, #f1acd5 50%)
+
+        &--waterice
+            background: linear-gradient(50deg, #90c6d4 50%, #7de1ff 50%)
+ 
+        &--waterflying
+            background: linear-gradient(50deg, #90c6d4 50%, #4d95a4 50%)
+        
+        &--waterelectric
+            background: linear-gradient(50deg, #90c6d4 50%, #ffdd77 50%)
+        
+        &--waterfairy
+            background: linear-gradient(50deg, #90c6d4 50%, #f7cfd3 50%)
+        
+        &--waterground
+            background: linear-gradient(50deg, #90c6d4 50%, #b59d68 50%)
+        
+        &--waterrock
+            background: linear-gradient(50deg, #90c6d4 50%, #9a9a9a 50%)
+        
+        &--waterdragon
+            background: linear-gradient(50deg, #90c6d4 50%, #e27966 50%)
+        
+        &--watergrass
+            background: linear-gradient(50deg, #90c6d4 50%, #8cc7ac 50%)
+        
+        &--waterdark
+            background: linear-gradient(50deg, #90c6d4 50%, #555c69 50%)
+        
+        &--watersteel
+            background: linear-gradient(50deg, #90c6d4 50%, #b9cdce 50%)
+        
+        &--waterghost
+            background: linear-gradient(50deg, #90c6d4 50%, #555c69 50%)
+
 
     &__type
         border-radius: 5px

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { from, map, mergeMap, Observable } from 'rxjs';
+import { from, map, mergeMap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Pokemon } from 'src/_model/Pokemon';
 
