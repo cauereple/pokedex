@@ -7,6 +7,7 @@ import { PokemonService } from 'src/_services/pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonHeaderComponent } from './components/pokemon-header/pokemon-header.component';
 import { PokemonFooterComponent } from './components/pokemon-footer/pokemon-footer.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PokemonFooterComponent } from './components/pokemon-footer/pokemon-foot
     PokemonListComponent,
     PokemonCardComponent,
     PokemonHeaderComponent,
-    PokemonFooterComponent
+    PokemonFooterComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
