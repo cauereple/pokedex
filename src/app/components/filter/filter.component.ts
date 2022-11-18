@@ -10,21 +10,48 @@ export class FilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.consoleLog()
+    this.toggleMenu()
+    this.selectedItems()
+    // this.openMenu()
   }
 
-  consoleLog() {
-    const selectBtn = document.querySelector(".pokemon-filter__btn")
-    const items = document.querySelectorAll(".pokemon-list__item")
+  // ----------- FORMATO ANGULAR PARA TOGGLE MENU --------------
 
-    const menu = document.querySelector(".menu-select")
+  // isMenuOpened: boolean = false;
 
+  // openMenu(): void {
+  //   this.isMenuOpened = !this.isMenuOpened;
+  // }
 
-    
-    menu?.addEventListener("click", () => {
-      menu.classList.toggle("open")
+  // -----------------------------------------------------------
+
+  
+  menuTitle: string = "Select Generations"
+
+  toggleMenu() {
+    const selectBtn = document.querySelector(".select-btn")
+
+    selectBtn?.addEventListener("click", () => {
+      selectBtn.classList.toggle("open")
     })
   }
-  
 
+  selectedItems() {
+    const items = document.querySelectorAll(".item")
+
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("checked")
+
+        let checked = document.querySelectorAll(".checked")
+        let btnText = document.querySelector(".btn-text")
+
+        if(checked && checked.length > 0) {
+          this.menuTitle = `${checked.length} Selected`
+        } else {
+          this.menuTitle = "Select Generations"
+        }
+      })
+    })
+  }
 }

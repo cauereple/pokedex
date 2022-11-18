@@ -16,7 +16,7 @@ import { FilterComponent } from './components/filter/filter.component';
     PokemonCardComponent,
     PokemonHeaderComponent,
     PokemonFooterComponent,
-    FilterComponent
+    FilterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,86 +1,93 @@
-.menu-dropdown
+.container
+    position: relative
     max-width: 200px
     width: 100%
-    // margin: 80px auto 30px
-    
-.pokemon-filter
-    background: linear-gradient(to top, #79e4a6, #1bc296)
     border-radius: 8px
-    box-shadow: 0 1px 6px 0 #000000
-    
-    &__btn
-        display: flex
-        justify-content: space-evenly
-        align-items: center
-        cursor: pointer
-        height: 40px
+    margin: 80px auto 30px
 
-    &__btn--text
-        padding-left: 10px
-        font-weight: 400
-        color: #403d3d
-
-    &__btn--arrow-down
-        border-radius: 15px
-        width: 14%
-        padding-top: 5px
-        display: flex
-        align-items: center
-        justify-content: center
-        background-color: #ebe7e7
-        background:  #79e4d9
-        box-shadow: 0 1px 6px 0 #000000
-        transition: 0.3s
-
-    &__btn--down-icon
-        height: 20px
-        padding-bottom: 2px
-    
-.menu-select__pokemon-list
-    background: linear-gradient(to top, #79e4a6, #1bc296)
-    box-shadow: 0 1px 6px 0 #000000
-    border-radius: 8px
+.select-btn
     display: flex
-    flex-direction: column
-    padding: 0px 5px
-    margin: 5px 0
+    height: 50px
+    align-items: center
+    justify-content: space-between
+    padding: 0 16px
+    cursor: pointer
+    border-radius: 8px
+    background: linear-gradient(to top, #79e4a6, #1bc296)
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+
+.select-btn .btn-text
+    font-size: 18px
+    font-weight: 400
+    color: #333
+
+.select-btn .arrow-dwn
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    color: #fff
+    font-size: 14px
+    height: 21px
+    width: 21px
+    background: #6e93f7
+    transition: 0.3s
+
+.select-btn.open .arrow-dwn
+    transform: rotate(-180deg)
+    
+.list-items
+    position: relative
+    margin-top: 5px
+    border-radius: 8px
+    padding: 16px
+    background: linear-gradient(to top, #79e4a6, #1bc296)
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
     display: none
 
-    .pokemon-list
-        &__item
-            padding: 5px 5px
-            display: flex
-            align-items: center
-            cursor: pointer
-            transition: 0.3s
-            border-radius: 8px
+.select-btn.open ~ .list-items
+    display: block
+    
+.list-items .item
+    display: flex
+    align-items: center
+    list-style: none
+    height: 50px
+    cursor: pointer
+    transition: 0.3s
+    padding: 0 15px 0 0px
+    border-radius: 8px
+    display: flex
+    justify-content: space-evenly
 
-            &--checkbox
-                border: 1.5px solid #c0c0c0
-                border-radius: 10px
-                padding: 0 5px
-                margin-right: 10px
-                transition: all 0.3s ease-in-out
-    
-            &--checkbox-icon
-                width: 10px
-                transform: scale(0)
-    
-            &--item-text
-                color: #403d3d
-            
-.pokemon-list__item:hover
+.list-items .item:hover
     background-color: #e7edfe
 
-.menu-select.open > .menu-select__pokemon-list
-    display: block
+.item .item-text
+    font-size: 18px
+    font-weight: 400
+    color: #333
 
-.menu-select.open .pokemon-filter__btn--arrow-down
-    transform: rotate(180deg)
-    box-shadow: inset 0 1px 6px 0 #000000
-    
-    
-        
-        
-    
-        
+.item .checkbox
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 16px
+    width: 16px
+    border-radius: 4px
+    margin-right: 12px
+    border: 1.5px solid #e2e2e2
+    transition: all 0.3s
+
+.item.checked .checkbox
+    background-color: #4070f4
+    border-color: #4070f4
+
+.checkbox .check-icon
+    color: #fff
+    font-size: 11px
+    transition: all 0.3s
+    transform: scale(0)
+
+.item.checked .check-icon
+    transform: scale(1)

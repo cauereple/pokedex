@@ -1,85 +1,60 @@
-<div class="menu-dropdown">
-    <div class="menu-select">
-        <div class="pokemon-filter">
-            <div class="pokemon-filter__btn">
-                <span class="pokemon-filter__btn--text">Select Generation</span>
-                <span class="pokemon-filter__btn--arrow-down">
-                        <img class="pokemon-filter__btn--down-icon" src="../../../assets/img/arrow-down.png" alt="Arrow down filter">
-                </span>
-            </div>
-        </div>
-
-        <ul class="menu-select__pokemon-list">
-                <li class="pokemon-list__item">
-                    <span class="pokemon-list__item--checkbox">
-                            <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </span>
-                    <span class="pokemon-list__item--item-text">1ª Generation</span>
-                </li>
-            <li class="pokemon-list__item">
-                <span class="pokemon-list__item--checkbox">
-                    <i>
-                        <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </i>
-                </span>
-                <span class="pokemon-list__item--item-text">2ª Generation</span>
-            </li>
-            <li class="pokemon-list__item">
-                <span class="pokemon-list__item--checkbox">
-                    <i>
-                        <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </i>
-                </span>
-                <span class="pokemon-list__item--item-text">2ª Generation</span>
-            </li>
-            <li class="pokemon-list__item">
-                <span class="pokemon-list__item--checkbox">
-                    <i>
-                        <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </i>
-                </span>
-                <span class="pokemon-list__item--item-text">3ª Generation</span>
-            </li>
-            <li class="pokemon-list__item">
-                <span class="pokemon-list__item--checkbox">
-                    <i>
-                        <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </i>
-                </span>
-                <span class="pokemon-list__item--item-text">4ª Generation</span>
-            </li>
-            <li class="pokemon-list__item">
-                <span class="pokemon-list__item--checkbox">
-                    <i>
-                        <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </i>
-                </span>
-                <span class="pokemon-list__item--item-text">5ª Generation</span>
-            </li>
-            <li class="pokemon-list__item">
-                <span class="pokemon-list__item--checkbox">
-                    <i>
-                        <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </i>
-                </span>
-                <span class="pokemon-list__item--item-text">6ª Generation</span>
-            </li>
-            <li class="pokemon-list__item">
-                <span class="pokemon-list__item--checkbox">
-                    <i>
-                        <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </i>
-                </span>
-                <span class="pokemon-list__item--item-text">7ª Generation</span>
-            </li>
-            <li class="pokemon-list__item">
-                <span class="pokemon-list__item--checkbox">
-                    <i>
-                        <img class="pokemon-list__item--checkbox-icon" src="../../../assets/img/check-icon.png" alt="">
-                    </i>
-                </span>
-                <span class="pokemon-list__item--item-text">8ª Generation</span>
-            </li>
-        </ul>
+<div class="container">
+    <div class="select-btn">
+    <!-- <div class="select-btn" (click)="openMenu()"> -->
+        <span class="btn-text">{{ menuTitle }}</span>
+        <span class="arrow-dwn">
+            <i class="fa-solid fa-chevron-down"></i>
+        </span>
     </div>
+    <ul class="list-items">
+    <!-- <ul class="list-items" *ngIf="isMenuOpened"> -->
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">1ª Generation</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">2ª Generation</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">3ª Generation</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">4ª Generation</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">5ª Generation</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">6ª Generation</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">7ª Generation</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">8ª Generation</span>
+        </li>
+    </ul>
 </div>
