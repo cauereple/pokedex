@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon-header',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+  }
+
+  searchClicked: boolean = false;
+
+  openSearch() {
+    this.searchClicked = !this.searchClicked;
+    this.focoInput()
+  }
+
+  focoInput() {
+    this.renderer.selectRootElement('#search-input').focus();
   }
 
 }
