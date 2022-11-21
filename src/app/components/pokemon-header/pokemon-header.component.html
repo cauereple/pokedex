@@ -8,4 +8,5 @@
             <img class="pokemon-header__search-icon" [class.btn-icon]="searchClicked" src="../../../assets/img/search-icon.svg" alt="Lupa">
         </a>
     </div>
+    <div class="closed-search" *ngIf="searchClicked" (click)="openSearch()"></div>
 </header>
