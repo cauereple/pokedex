@@ -1,13 +1,14 @@
 .container
     position: relative
     max-width: 200px
+    min-width: 200px
     width: 100%
     border-radius: 8px
-    margin: 80px auto 30px
+    margin: 10px
 
 .select-btn
     display: flex
-    height: 50px
+    height: 40px
     align-items: center
     justify-content: space-between
     padding: 0 16px
@@ -19,7 +20,7 @@
 .select-btn .btn-text
     font-size: 18px
     font-weight: 400
-    color: #333
+    color: #3e3e3e
 
 .select-btn .arrow-dwn
     display: flex
@@ -37,12 +38,14 @@
     transform: rotate(-180deg)
     
 .list-items
-    position: relative
+    position: absolute
+    box-sizing: border-box
     margin-top: 5px
     border-radius: 8px
-    padding: 16px
+    padding: 8px
+    width: 100%
     background: linear-gradient(to top, #79e4a6, #1bc296)
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1)
     display: none
 
 .select-btn.open ~ .list-items
@@ -55,7 +58,7 @@
     height: 50px
     cursor: pointer
     transition: 0.3s
-    padding: 0 15px 0 0px
+    padding: 0 16px 0 0px
     border-radius: 8px
     display: flex
     justify-content: space-evenly
@@ -66,7 +69,7 @@
 .item .item-text
     font-size: 18px
     font-weight: 400
-    color: #333
+    color: #3e3e3e
 
 .item .checkbox
     display: flex
@@ -91,3 +94,11 @@
 
 .item.checked .check-icon
     transform: scale(1)
+
+
+.closed-filter
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh

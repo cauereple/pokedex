@@ -12,28 +12,22 @@ export class FilterComponent implements OnInit {
   ngOnInit(): void {
     this.toggleMenu()
     this.selectedItems()
-    // this.openMenu()
   }
-
-  // ----------- FORMATO ANGULAR PARA TOGGLE MENU --------------
-
-  // isMenuOpened: boolean = false;
-
-  // openMenu(): void {
-  //   this.isMenuOpened = !this.isMenuOpened;
-  // }
-
-  // -----------------------------------------------------------
-
   
   menuTitle: string = "Select Generations"
+  isMenuOpened: boolean = false
+
+  generationNumber: number = 1
+  generation: any
 
   toggleMenu() {
-    const selectBtn = document.querySelector(".select-btn")
+    this.isMenuOpened = !this.isMenuOpened
 
-    selectBtn?.addEventListener("click", () => {
-      selectBtn.classList.toggle("open")
-    })
+    // MODO JAVASCRIPT DE FAZER
+    // const selectBtn = document.querySelector(".select-btn")
+    // selectBtn?.addEventListener("click", () => {
+    //   selectBtn.classList.toggle("open")
+    // })
   }
 
   selectedItems() {
@@ -44,7 +38,6 @@ export class FilterComponent implements OnInit {
         item.classList.toggle("checked")
 
         let checked = document.querySelectorAll(".checked")
-        let btnText = document.querySelector(".btn-text")
 
         if(checked && checked.length > 0) {
           this.menuTitle = `${checked.length} Selected`
