@@ -1,60 +1,17 @@
 <div class="container">
-    <div class="select-btn" [class.open]="!isMenuOpened" (click)="toggleMenu()">
+    <div class="select-btn" [class.open]="isMenuOpened" (click)="toggleMenu()">
         <span class="btn-text">{{ menuTitle }}</span>
         <span class="arrow-dwn">
             <i class="fa-solid fa-chevron-down"></i>
         </span>
     </div>
     <ul class="list-items">
-    <!-- <ul class="list-items" *ngIf="isMenuOpened"> -->
-        <li class="item" *ngFor="let generation of generations" [class.checked]="!isChecked" (click)="selectedItems()">
+        <li class="item" *ngFor="let generation of generations" [class.checked]="selectedItems(generation)" (click)="existingItems(generation)">
             <span class="checkbox">
                 <i class="fa-solid fa-check check-icon"></i>
             </span>
             <span class="item-text">{{ generation }}</span>
         </li>
-        <!-- <li class="item">
-            <span class="checkbox">
-                <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">2ª Generation</span>
-        </li>
-        <li class="item">
-            <span class="checkbox">
-                <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">3ª Generation</span>
-        </li>
-        <li class="item">
-            <span class="checkbox">
-                <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">4ª Generation</span>
-        </li>
-        <li class="item">
-            <span class="checkbox">
-                <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">5ª Generation</span>
-        </li>
-        <li class="item">
-            <span class="checkbox">
-                <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">6ª Generation</span>
-        </li>
-        <li class="item">
-            <span class="checkbox">
-                <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">7ª Generation</span>
-        </li>
-        <li class="item">
-            <span class="checkbox">
-                <i class="fa-solid fa-check check-icon"></i>
-            </span>
-            <span class="item-text">8ª Generation</span>
-        </li> -->
     </ul>
 </div>
-<div class="closed-filter" *ngIf="!isMenuOpened" (click)="toggleMenu()"></div>
+<div class="closed-filter" *ngIf="isMenuOpened" (click)="toggleMenu()"></div>

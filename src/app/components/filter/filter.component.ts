@@ -10,13 +10,13 @@ export class FilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.toggleMenu()
-    this.selectedItems()
   }
   
   menuTitle: string = "Select Generations"
   isMenuOpened: boolean = false
   isChecked: boolean = false
+
+  selectedGenerations: Array<any> = []
 
   generations: Array<any> = [
     "1ª Generation",
@@ -39,9 +39,27 @@ export class FilterComponent implements OnInit {
     // })
   }
 
+  existingItems(generation: any) {
 
-  selectedItems() {
     this.isChecked = !this.isChecked
+
+    let contain = (element: any) => element === generation
+    let filterArray = this.selectedGenerations.some(contain)
+
+    if(!filterArray){
+      this.selectedGenerations.push(generation)
+    } else {
+      this.selectedGenerations = this.selectedGenerations.filter(item => item !== generation)
+    }
+    console.log(this.selectedGenerations);
+    console.log(this.selectedGenerations.some(contain));
+  }
+
+  selectedItems(generation: any): boolean {
+    let contain = (element: any) => element === generation
+    let filterArray = this.selectedGenerations.some(contain)
+
+    return filterArray
   }
 
 
