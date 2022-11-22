@@ -16,9 +16,18 @@ export class FilterComponent implements OnInit {
   
   menuTitle: string = "Select Generations"
   isMenuOpened: boolean = false
+  isChecked: boolean = false
 
-  generationNumber: number = 1
-  generation: any
+  generations: Array<any> = [
+    "1ª Generation",
+    "2ª Generation",
+    "3ª Generation",
+    "4ª Generation",
+    "5ª Generation",
+    "6ª Generation",
+    "7ª Generation",
+    "8ª Generation",
+  ]
 
   toggleMenu() {
     this.isMenuOpened = !this.isMenuOpened
@@ -30,21 +39,27 @@ export class FilterComponent implements OnInit {
     // })
   }
 
+
   selectedItems() {
-    const items = document.querySelectorAll(".item")
-
-    items.forEach(item => {
-      item.addEventListener("click", () => {
-        item.classList.toggle("checked")
-
-        let checked = document.querySelectorAll(".checked")
-
-        if(checked && checked.length > 0) {
-          this.menuTitle = `${checked.length} Selected`
-        } else {
-          this.menuTitle = "Select Generations"
-        }
-      })
-    })
+    this.isChecked = !this.isChecked
   }
+
+
+  // selectedItems() {
+  //   const items = document.querySelectorAll(".item")
+
+  //   items.forEach(item => {
+  //     item.addEventListener("click", () => {
+  //       item.classList.toggle("checked")
+
+  //       let checked = document.querySelectorAll(".checked")
+
+  //       if(checked && checked.length > 0) {
+  //         this.menuTitle = `${checked.length} Selected`
+  //       } else {
+  //         this.menuTitle = "Select Generations"
+  //       }
+  //     })
+  //   })
+  // }
 }

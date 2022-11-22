@@ -22,10 +22,8 @@ export function getPokemonType(pokemon: Pokemon) {
 
   if(pokemonType.length > 1) {
     classPart = `pokemon-card__color--${pokemonType[0]}${pokemonType[1]}`
-    // classPart = "pokemon-card__color--".concat(pokemonType[0]).concat(pokemonType[1])
   } else {
     classPart = `pokemon-card__color--${pokemonType[0]}`
-    // classPart = "pokemon-card__color--".concat(pokemonType[0])
   }
 
   return classPart;

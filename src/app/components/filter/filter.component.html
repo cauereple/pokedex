@@ -1,21 +1,19 @@
 <div class="container">
     <div class="select-btn" [class.open]="!isMenuOpened" (click)="toggleMenu()">
-    <!-- <div class="select-btn" (click)="openMenu()"> -->
         <span class="btn-text">{{ menuTitle }}</span>
         <span class="arrow-dwn">
             <i class="fa-solid fa-chevron-down"></i>
         </span>
     </div>
-    <!-- <ul class="list-items" *ngFor="let generation of generationNumber"> -->
     <ul class="list-items">
     <!-- <ul class="list-items" *ngIf="isMenuOpened"> -->
-        <li class="item">
+        <li class="item" *ngFor="let generation of generations" [class.checked]="!isChecked" (click)="selectedItems()">
             <span class="checkbox">
                 <i class="fa-solid fa-check check-icon"></i>
             </span>
-            <span class="item-text">1ª Generation</span>
+            <span class="item-text">{{ generation }}</span>
         </li>
-        <li class="item">
+        <!-- <li class="item">
             <span class="checkbox">
                 <i class="fa-solid fa-check check-icon"></i>
             </span>
@@ -56,7 +54,7 @@
                 <i class="fa-solid fa-check check-icon"></i>
             </span>
             <span class="item-text">8ª Generation</span>
-        </li>
+        </li> -->
     </ul>
 </div>
 <div class="closed-filter" *ngIf="!isMenuOpened" (click)="toggleMenu()"></div>
