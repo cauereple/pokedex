@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject } from '@angular/core';
 import { PokemonService } from 'src/_services/pokemon.service';
 
 @Component({
@@ -8,8 +9,24 @@ import { PokemonService } from 'src/_services/pokemon.service';
 })
 export class PokemonListComponent {
 
-  constructor(public pokemonService: PokemonService) { }
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    public pokemonService: PokemonService) { }
 
   ngOnInit(): void {
+  }
+
+  showButton: boolean = false
+  scrollHeight: number = 500
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    const scrollY = window.scrollY
+    const scrollTop = this.document.documentElement.scrollTop
+    this.showButton = (scrollY || scrollTop) > this.scrollHeight
+  }
+
+  onScrollTop(): void {
+    this.document.documentElement.scrollTop = 0
   }
 }
